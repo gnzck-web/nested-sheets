@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import {
 	NestedSheet,
 	NestedSheetContent,
+	NestedSheetDescription,
+	NestedSheetHeader,
 	NestedSheetsProvider,
-	SheetDescription,
-	SheetHeader,
-	SheetTitle,
+	NestedSheetTitle,
 	useNestedSheet,
 } from "@/components/ui/nested-sheet";
 
@@ -30,13 +30,13 @@ function App() {
 
 				<NestedSheet open={isMainOpen} onOpenChange={setIsMainOpen}>
 					<NestedSheetContent>
-						<SheetHeader>
-							<SheetTitle>Main Sheet</SheetTitle>
-							<SheetDescription>
+						<NestedSheetHeader>
+							<NestedSheetTitle>Main Sheet</NestedSheetTitle>
+							<NestedSheetDescription>
 								This is the main sheet. Click the button below to open a nested
 								sheet.
-							</SheetDescription>
-						</SheetHeader>
+							</NestedSheetDescription>
+						</NestedSheetHeader>
 						<Button type="button" onClick={() => setIsSubOpen((v) => !v)}>
 							Open Sub Sheet
 						</Button>
@@ -44,13 +44,13 @@ function App() {
 
 					<NestedSheet open={isSubOpen} onOpenChange={setIsSubOpen}>
 						<NestedSheetContent>
-							<SheetHeader>
-								<SheetTitle>Nested Sheet (Level 1)</SheetTitle>
-								<SheetDescription>
+							<NestedSheetHeader>
+								<NestedSheetTitle>Nested Sheet (Level 1)</NestedSheetTitle>
+								<NestedSheetDescription>
 									This sheet is nested inside the main sheet. Notice how the
 									main sheet scales down automatically.
-								</SheetDescription>
-							</SheetHeader>
+								</NestedSheetDescription>
+							</NestedSheetHeader>
 							<Button type="button" onClick={() => setIsSub2Open((v) => !v)}>
 								Open Sub Sheet 2
 							</Button>
@@ -58,13 +58,13 @@ function App() {
 
 						<NestedSheet open={isSub2Open} onOpenChange={setIsSub2Open}>
 							<NestedSheetContent>
-								<SheetHeader>
-									<SheetTitle>Nested Sheet (Level 2)</SheetTitle>
-									<SheetDescription>
+								<NestedSheetHeader>
+									<NestedSheetTitle>Nested Sheet (Level 2)</NestedSheetTitle>
+									<NestedSheetDescription>
 										This is a third level nested sheet! All styling and
 										positioning happens automatically.
-									</SheetDescription>
-								</SheetHeader>
+									</NestedSheetDescription>
+								</NestedSheetHeader>
 							</NestedSheetContent>
 						</NestedSheet>
 					</NestedSheet>

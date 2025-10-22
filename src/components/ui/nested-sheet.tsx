@@ -412,4 +412,8 @@ NestedSheetContent.displayName = "NestedSheetContent";
 // ============================================================================
 
 // Re-export the other sheet components for convenience
-export { SheetDescription, SheetHeader, SheetTitle } from "./sheet";
+export {
+	SheetDescription as NestedSheetDescription,
+	SheetHeader as NestedSheetHeader,
+	SheetTitle as NestedSheetTitle,
+} from "./sheet";
